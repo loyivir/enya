@@ -1,0 +1,74 @@
+@import '../variables'
+.header
+  background-color: $bg_main
+  &__container
+    position: relative
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    padding-top: 35px
+    padding-bottom: 26px
+  &-logo
+    &__img
+      width: 90px
+      height: 28px
+  &__nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-left: auto
+    margin-right: 50px
+    min-width: 415px
+    margin-top: 5px
+
+    &-item
+      position: relative
+      &_visible
+        display: none
+    &-link
+      color: $font_header
+      font-weight: 600
+      line-height: 22px
+      font-size: 16px
+  &__subnav
+    position: absolute
+    border: solid 1px $font_header
+    background-color: $bg_main
+    border-radius: 8px
+    padding: 5px
+    white-space: nowrap
+    top: 100%
+    left: 0px
+    z-index: 25
+    opacity: 0
+    transform: scaleY(0)
+    transform-origin: 0 0
+    transition: .5s ease-in-out
+    width: fit-content
+    display: none
+
+    &-item
+      border-bottom: 1px solid $font_header
+      &:last-child
+        border-bottom: none
+    &-item
+      padding: 5px
+    &_visible
+      display: block
+  &__menu
+    display: none
+    background: url(../img/header/menu.svg)
+    width: 22px
+    height: 18px
+    outline: none
+    border: none
+    display: none
+    background-size: cover
+    margin-right: 7px
+    margin-top: 2px
+  &__button
+    border-color: $button
+    color: $button
+    margin-top: -8px
+    &_visible
+      display: none

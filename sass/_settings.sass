@@ -1,0 +1,90 @@
+@import 'variables'
+*
+  box-sizing: border-box
+a
+  text-decoration: none
+  font-family: 'Open Sans', sans-serif
+  color: inherit
+  &:hover
+    cursor: pointer
+    text-decoration: underline
+h1,h2,h3,h4,h5
+  font-family: 'Roboto', sans-serif
+  font-weight: 700
+  color: $font_header
+  margin-top: 0
+  margin-bottom: 0
+h1
+  font-size: 48px
+  line-height: 60px
+h2
+  font-size: 36px
+  line-height: 60px
+.container
+  max-width: 1440px
+  margin: auto
+.wrapper
+  max-width: 1140px
+  margin: auto
+.nav
+  margin-top: 0
+  padding-left: 0px
+  &-item
+    list-style-type: none
+    margin: 0
+    display: flex
+    font-family: 'Open Sans', sans-serif
+    &__link
+      overflow: hidden
+      text-overflow: ellipsis
+      max-width: 100%
+      &_expanded
+        &::after
+          content: url('../img/header/angle-down.svg')
+          float: right
+          padding-left: 3px
+          width: 9px
+          height: 7px
+.button
+  padding: 11px 24px 10px 22px
+  font-family: 'Open Sans', sans-serif
+  font-weight: 700
+  font-size: 16px
+  line-height: 22px
+  text-align: center
+  border-radius: 8px
+  outline: none
+  overflow: hidden
+  text-overflow: ellipsis
+  max-width: 100%
+  &_dark
+    color: $font_light
+    background-color: $font_header
+    font-size: 18px
+    line-height: 25px
+    padding: 16px 40px 15px 39px
+    border: 1px solid $font_header
+    &:hover
+      color: $font_header
+      background-color: $font_light
+      border: 2px solid $font_header
+  &_framed
+    filter: drop-shadow(0px 10px 25px rgba(21, 37, 72, 0.1))
+    border: 2px solid
+    box-sizing: border-box
+    &:hover
+      border-color: $bg_dark
+      color: $bg_dark
+  &:hover
+    cursor: pointer
+.text
+  font-family: 'Open Sans', sans-serif
+  color: $font_text
+  font-weight: 400
+  font-size: 18px
+  line-height: 32px
+.nav-item_expanded:hover .nav
+  opacity: 1
+  transform: scaleY(1)
+  display: flex
+  flex-direction: column

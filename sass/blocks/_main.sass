@@ -1,0 +1,69 @@
+@import '../variables'
+
+.main
+  background-color: $bg_main
+  &__container
+    position: relative
+    min-height: 558px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 62px
+    padding-bottom: 100px
+  &__button
+    margin-top: 65px
+    margin-bottom: 112px
+  &-devices
+    flex-basis: 60%
+  &-description
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    flex-basis: 42%
+    position: relative
+    margin-top: -10px
+    min-width: 470px
+
+  &__next
+    position: absolute
+    left: 0
+    bottom: 0
+    border-radius: 58%
+    width: 54px
+    height: 56px
+    border-color: $font_text
+    display: flex
+    justify-content: center
+    align-items: center
+  &__img
+    margin: auto
+  &__text
+    margin-top: 15px
+.macbook
+  height: 560px
+  position: absolute
+  right: 0
+  z-index: 5
+  &-bg
+    position: absolute
+    right: 0
+    top: 180px
+    width: 345px
+    height: 540px
+    z-index: 0
+.iphone
+  position: absolute
+  right: 508px
+  top: 205px
+  z-index: 10
+  width: 217px
+  height: 436px
+  &-bg
+    position: absolute
+    right: 652px
+    top: 155px
+    width: 102px
+    height: 118px
+    z-index: 0
