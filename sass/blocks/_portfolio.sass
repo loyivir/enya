@@ -1,0 +1,64 @@
+@import '../variables'
+.portfolio
+  background-color: $bg_light
+  &__wrapper
+    padding-top: 25px
+    padding-bottom: 100px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    position: relative
+  &__title
+    margin-bottom: 15px
+
+  &-swiper
+    width: fit-content
+    max-width: calc(100vw - 150px)
+    &__wrapper
+    &__slide
+      width: 360px
+      margin-top: 40px
+  &__button
+    background: url('../img/portfolio/arrow.svg') no-repeat 50% 50%
+    width: 56px
+    height: 56px
+    position: absolute
+    background-color: transparent
+    z-index: 99
+    outline: none
+    &:hover
+      border: 1px solid $bg_dark
+      border-radius: 4px
+    &_prev
+
+      right: 155px
+      top: 60px
+    &_next
+      right: 95px
+      top: 60px
+      transform: scaleX(-1)
+
+  &-item
+    width: 360px
+    height: 524px
+    overflow: hidden
+    text-overflow: ellipsis
+
+    border: 1px solid $bg_item
+    border-radius: 8px
+  &__item-title
+    padding-left: 25px
+    margin-top: 0px
+  &__img
+    height: 400px
+    transform: translateY(-45px)
+    &-wrapper
+      height: 400px
+      width: 100%
+      margin-bottom: auto
+      overflow: hidden
+  &__theme
+    padding-left: 25px
+    margin-top: 20px
+    margin-bottom: 20px

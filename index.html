@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Ehya - Агентство цифровых продуктов</title>
   </head>
@@ -264,7 +265,84 @@
         </div>
       </div>
     </div>
+    <div class="portfolio">
+      <div class="container portfolio__container">
+        <div class="wrapper portfolio__wrapper">
+          <h6 class="title portfolio__title">Портфолио</h6>
+          <h2 class="portfolio__slogan">Наши проекты</h2>
+          <div class="portfolio__button portfolio__button_prev"></div>
+          <div class="portfolio__button portfolio__button_next"></div>
+          <!-- Slider main container -->
+          <div class="swiper-container portfolio-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper portfolio-swiper__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide portfolio-swiper__slide">
+                <div class="portfolio-item">
+                  <div class="portfolio__img-wrapper">
+                    <img
+                      src="img/portfolio/website.png"
+                      alt="Вебсайт, Лендинг"
+                      class="portfolio__img"
+                    />
+                  </div>
+                  <h6 class="portfolio__theme">Вебсайт, Лендинг</h6>
+                  <h5 class="portfolio__item-title">Проект Вебсайта</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide portfolio-swiper__slide">
+                <div class="portfolio-item">
+                  <div class="portfolio__img-wrapper">
+                    <img
+                      src="img/portfolio/design.png"
+                      alt="Паенль навигации, UI/UX  Дизайн"
+                      class="portfolio__img"
+                    />
+                  </div>
+                  <h6 class="portfolio__theme">
+                    Паенль навигации, UI/UX Дизайн
+                  </h6>
+                  <h5 class="portfolio__item-title">Проект Дизайна</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide portfolio-swiper__slide">
+                <div class="portfolio-item">
+                  <div class="portfolio__img-wrapper">
+                    <img
+                      src="img/portfolio/application.png"
+                      alt="Приложения, Мобильные, iOS"
+                      class="portfolio__img"
+                    />
+                  </div>
+                  <h6 class="portfolio__theme">Приложения, Мобильные, iOS</h6>
+                  <h5 class="portfolio__item-title">Проекты приложений</h5>
+                </div>
+              </div>
+
+              <div class="swiper-slide portfolio-swiper__slide">
+                <div class="portfolio-item">
+                  <div class="portfolio__img-wrapper">
+                    <img
+                      src="img/portfolio/illustrations.png"
+                      alt="Instagram"
+                      class="portfolio__img"
+                    />
+                  </div>
+                  <h6 class="portfolio__theme">Instagram</h6>
+                  <h5 class="portfolio__item-title">Проект Иллюстраций</h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
