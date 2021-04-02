@@ -13,8 +13,10 @@
     margin-bottom: 15px
 
   &-swiper
-    width: calc(100% + (100vw - 100%) / 2 - 10px)
+
+    width: calc(100% + (100vw - 100%) - 10px)
     max-width: 1440px
+    transform: translateX(-150px)
     &__wrapper
     &__slide
       width: 360px
@@ -62,3 +64,8 @@
     padding-left: 25px
     margin-top: 20px
     margin-bottom: 20px
+
+.portfolio__button_prev.swiper-button-disabled, .portfolio__button_next.swiper-button-disabled
+  opacity: 0.35
+  cursor: auto
+  pointer-events: none

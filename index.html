@@ -118,7 +118,10 @@
               Мы даем результаты, помогающие Вам добиться экономии средств и
               времени без риска или накладных расходов на управление
             </div>
-            <button class="button button_dark main__button">
+            <button
+              class="button button_dark main__button"
+              onclick="window.location.href='#portfolio'"
+            >
               Наше портфолио
             </button>
             <a href="#partners" class="button button_framed main__next">
@@ -265,7 +268,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container portfolio__container">
         <div class="wrapper portfolio__wrapper">
           <h6 class="title portfolio__title">Портфолио</h6>
@@ -290,7 +293,6 @@
                   <h5 class="portfolio__item-title">Проект Вебсайта</h5>
                 </div>
               </div>
-
               <div class="swiper-slide portfolio-swiper__slide">
                 <div class="portfolio-item">
                   <div class="portfolio__img-wrapper">
@@ -301,7 +303,7 @@
                     />
                   </div>
                   <h6 class="portfolio__theme">
-                    Паенль навигации, UI/UX Дизайн
+                    Панель навигации, UI/UX Дизайн
                   </h6>
                   <h5 class="portfolio__item-title">Проект Дизайна</h5>
                 </div>
@@ -334,9 +336,92 @@
                   <h5 class="portfolio__item-title">Проект Иллюстраций</h5>
                 </div>
               </div>
+              <div
+                class="swiper-slide portfolio-swiper__slide portfolio-swiper__slide_visible"
+              >
+                <div class="portfolio-item">
+                  <div class="portfolio__img-wrapper">
+                    <img
+                      src="img/portfolio/website.png"
+                      alt="Вебсайт, Лендинг"
+                      class="portfolio__img"
+                    />
+                  </div>
+                  <h6 class="portfolio__theme">Вебсайт, Лендинг</h6>
+                  <h5 class="portfolio__item-title">Проект Вебсайта</h5>
+                </div>
+              </div>
             </div>
 
             <!-- If we need navigation buttons -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feedbacks">
+      <div class="container feedbacks__container">
+        <div class="wrapper feedbacks__wrapper">
+          <h6 class="title feedbacks__title">Отзывы</h6>
+          <h2 class="feedbacks__slogan">Что говорят о нас</h2>
+          <!-- If we need navigation buttons -->
+          <div class="feedbacks__button feedbacks__button_next"></div>
+
+          <!-- Slider main container -->
+          <div class="swiper-container feedbacks-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper feedbacks-swiper__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide feedbacks-swiper__slide">
+                <div class="feedbacks-item">
+                  <div class="feedbacks__author">
+                    <div class="feedbacks-item__wrapper">
+                      <img
+                        src="img/feedbacks/jaquon.png"
+                        alt="Jaquon Hart photo"
+                        class="feedbacks__img"
+                      />
+                    </div>
+                    <div class="feedbacks__who">
+                      <div class="feedbacks__name">Jaquon Hart</div>
+                      <div class="feedbacks__position">
+                        Вице-президент - компания Lizlle
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedbacks__text">
+                    «Их навыки и опыт в области пользовательского интерфейса /
+                    пользовательского интерфейса были ключевыми для выявления
+                    потенциальных проблемных моментов в наших бизнес-процессах,
+                    которые они прекрасно исправили или оптимизировали».
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide feedbacks-swiper__slide">
+                <div class="feedbacks-item">
+                  <div class="feedbacks__author">
+                    <div class="feedbacks-item__wrapper">
+                      <img
+                        src="img/feedbacks/valdemar.png"
+                        alt="Valdemar Forsberg photo"
+                        class="feedbacks__img"
+                      />
+                    </div>
+                    <div class="feedbacks__who">
+                      <div class="feedbacks__name">Valdemar Forsberg</div>
+                      <div class="feedbacks__position">
+                        Основатель Digitac Finance
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedbacks__text">
+                    Ehya подтолкнул нас к мысли, выходящей за рамки наших
+                    первоначальных возможностей и воображения, при этом
+                    гарантируя, что дизайн и форма платформы постоянно
+                    корректируются на основе данных.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

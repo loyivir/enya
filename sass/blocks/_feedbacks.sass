@@ -1,0 +1,98 @@
+@import '../variables'
+.feedbacks
+  background-color: $bg_light
+  &__wrapper
+    padding-top: 60px
+    padding-bottom: 100px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    position: relative
+  &__title
+    margin-bottom: 15px
+  &__slogan
+    margin-bottom: 40px
+  &-swiper
+    width: 100%
+    height: fit-content
+    &__wrapper
+      &__slide
+        width: 360px
+        margin-top: 0px
+        height: 100%
+      &_visible
+        display: block
+  &__button
+    background: url('../img/feedbacks/arrow.svg') no-repeat 50% 50%
+    width: 56px
+    height: 56px
+    position: absolute
+    z-index: 99
+    outline: none
+    filter: drop-shadow(0px 12px 16px rgba(0, 0, 0, 0.08))
+    border-radius: 50%
+    background-color: $bg_light
+    &:hover
+      border: 1px solid $bg_dark
+
+    &_next
+      right: -2.5%
+      top: 53%
+
+  &-item
+    width: 555px
+    height: 267px
+
+    text-overflow: ellipsis
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05)
+    border: 1px solid $border_light
+    border-radius: 8px
+    padding: 40px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    &__wrapper
+      height: 56px
+      width: 57px
+      border-radius: 50%
+      overflow: hidden
+      margin-right: 20px
+  &__author
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+  &__who
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-direction: column
+    margin-bottom: 30px
+  &__img
+    height: 56px
+    width: 57px
+    object-fit: cover
+
+  &__name
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.2px
+    color: $font_header
+    margin-bottom: 5px
+  &__position
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+    color: $font_text
+  &__text
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+    font-size: 14px
+    line-height: 24px
+    color: $font_text
+    overflow-y: auto
+    min-height: 176px
