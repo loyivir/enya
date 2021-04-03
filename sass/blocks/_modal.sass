@@ -1,0 +1,169 @@
+@import '../variables'
+
+.modal
+  width: 100%
+  height: 100%
+  font-family: 'Open Sans', sans-serif
+  &__overlay
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background: rgba(13, 36, 54, 0.29)
+    z-index: 99
+    visibility: hidden
+    max-width: 100%
+    height: 100%
+    &_visible
+      visibility: visible
+  &-brief
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background: $bg_dark
+    border-radius: 8px
+    border: solid 1px $font_header
+    max-width: 478px
+    max-height: 95%
+    z-index: 100
+    padding: 33px 88px
+    display: grid
+    grid-template: 39px 1fr / 100%
+    padding-top: 33px
+    visibility: hidden
+    overflow-y: auto
+    &__form
+      position: relative
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      flex-basis: 100%
+      width: 302px
+
+    &__name
+      width: 100%
+      overflow: hidden
+      border: 0
+      outline: 0
+      font-size: 12px
+      line-height: 15px
+      max-width: 100%
+
+    &__phone
+      width: 100%
+      overflow: hidden
+      border: 0
+      outline: 0
+      font-size: 12px
+      line-height: 15px
+      max-width: 100%
+      margin-top: 15px
+    &__email
+      width: 100%
+      overflow: hidden
+      border: 0
+      outline: 0
+      font-size: 12px
+      line-height: 15px
+      max-width: 100%
+      margin-top: 15px
+    &__text
+      width: 100%
+      padding: 18px 23px 17px 23px
+      background-color: $bg-light
+      border-radius: 4px
+      resize: none
+      overflow-y: auto
+      overflow-x: none
+      scroll-behavior: smooth
+      height: 123px
+      border: 0
+      outline: 0
+      font-size: 12px
+      line-height: 15px
+      max-width: 100%
+      margin-top: 15px
+    &__button
+      height: 50px
+      width: fit-content
+      margin-top: 15px
+      max-width: 100%
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      margin-bottom: 15px
+      &:hover
+        color: $bg_light
+        background-color: $font_dark
+        border: 2px solid $bg_main
+    &__group
+      width: 100%
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      flex-direction: column
+    &__label
+      font-weight: bold
+      font-size: 13px
+      line-height: 15px
+      color: $font_text
+      text-align: right
+      margin-top: 15px
+      width: 100%
+
+  &__title
+    font-weight: bold
+    font-size: 17px
+    line-height: 23px
+    color: $font_text
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 0
+    width: 100%
+    text-align: center
+  &__text
+    font-family: 'Open Sans', sans-serif
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    color: $font_text
+    text-align: center
+  &__img
+    width: 16px
+    height: 16px
+  &__close
+    position: absolute
+    top: 17px
+    right: 18px
+  &-success, &-fail
+    position: fixed
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    border: solid 1px $font_header
+    background: $bg_dark
+    border-radius: 8px
+    max-width: 478px
+    height: 250px
+    z-index: 100
+    padding: 33px 88px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-top: 33px
+    visibility: hidden
+    overflow-y: auto
+  &_visible
+    visibility: visible
+    animation: zoom-in 0.3s ease-out 0s 1
+
+@keyframes zoom-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1

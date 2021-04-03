@@ -93,4 +93,93 @@ portfolioSwiper.slideNext(0, false);
       }
 });
 // Initialize feedbacks slider
+// Modals
+let modalBtn = $("[data-toggle=modal]");
+let closeModalBtn = $(".modal__close");
+closeModalBtn.on('click', closeModal);
+modalBtn.on('click', openModal);
+function openModal() {
+  let targetModal = $(this).attr("data-href"); 
+    
+  $(targetModal).find(".modal__overlay").addClass("modal__overlay_visible");
+  $(targetModal).find(".modal-brief").addClass("modal_visible");
+}
+function closeModal(event) {
+  event.preventDefault();
+  const modal = $(".modal");
+  $(modal).find(".modal__overlay_visible").removeClass("modal__overlay_visible");
+  $(modal).find(".modal_visible").removeClass("modal_visible");
+  
+}
+     function closeAllModal() {
+      const modal = $(".modal");
+      $(modal).find(".modal__overlay_visible").removeClass("modal__overlay_visible");
+      $(modal).find(".modal_visible").removeClass("modal_visible");
+    }
+$(document).keydown(function(event) { 
+  if (event.keyCode == 27) { 
+    closeModal(event);
+    
+  }
+});
+$(".modal__overlay").click(function(event) { 
+closeAllModal()
+});
+
+
+// Validation
+
+$("#brief").validate({
+  
+  errorClass: "invalid",
+  rules: {    
+      brief_name: {
+      required: true,
+      minlength: 1,
+      maxlength: 32
+    },
+    brief_phone: {
+      required: true,
+      minlength: 17,
+      maxlength: 17
+    },
+    brief_text: {
+      required: false,
+      minlength: 0,
+      maxlength: 1000
+    },
+    brief_email: {
+      required: true,
+      email: true,
+      minlength: 6,
+      maxlength: 36
+    }
+  },
+  messages: {
+    booking_name: "Пожалуйстаб представьтесь",
+    booking_phone: "Нам нужен ваш номер для связи",    
+    booking_email: {
+      required: "Нам нужен адрес вашей почты для связи",
+      email: "Пожалуйста, введите адрес вашей почты в формате name@domain.ru"
+    }
+  }
+});
+
+// Masking
+
+$('.modal-brief__phone').mask('+7(000) 000-00-00');
+// Prevent invalid submit
+    var ids = ["#brief"];
+    ids.forEach(function(it, i, ids) {
+      var form = $(it);
+      form.on('submit', function(e) {       
+        var valid = form.valid();       
+        if (valid)
+        {
+          
+          send(e, 'send.php', form.attr('id')); 
+          form.trigger("reset");
+        } 
+      });
+    });
 });

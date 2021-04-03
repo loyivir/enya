@@ -590,7 +590,14 @@
       padding-left: 30px
       padding-right: 30px
       &:hover
-
+  .modal
+    &-brief
+      padding: 33px 66px
+      &__button
+        margin-bottom: 15px
+        max-width: 100%
+    &-success, &-fail
+      padding: 23px 20px
 @media only screen and (max-width: 480px) and (min-width: 320px)
   .main
     &-description
@@ -617,3 +624,11 @@
       top: 500px
       width: 66px
       height: 75px
+  .modal
+    &-brief
+      padding: 33px 33px
+      &__form
+        width: 250px
+      &__button
+        margin-bottom: 15px
+        width: 160px

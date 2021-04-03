@@ -26,6 +26,8 @@
           <ul class="nav header__nav">
             <li class="nav-item header__nav-item header__nav-item_visible">
               <button
+                data-toggle="modal"
+                data-href="#brief-modal"
                 class="button button_framed header__button header__button_visible"
               >
                 Получить
@@ -102,7 +104,13 @@
             </li>
           </ul>
 
-          <button class="button button_framed header__button">Получить</button>
+          <button
+            class="button button_framed header__button"
+            data-toggle="modal"
+            data-href="#brief-modal"
+          >
+            Получить
+          </button>
           <button class="menu header__menu"></button>
         </div>
       </div>
@@ -526,7 +534,13 @@
             Отправьте нам свой бриф и расскажите о своем проекте. Мы готовы
             помочь всем, что вам нужно
           </div>
-          <button class="button button_light brief__button">Пообщаемся?</button>
+          <button
+            class="button button_light brief__button"
+            data-toggle="modal"
+            data-href="#brief-modal"
+          >
+            Пообщаемся?
+          </button>
         </div>
       </div>
     </div>
@@ -675,8 +689,97 @@
         </div>
       </div>
     </div>
+    <div class="modal" id="brief-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal-brief">
+        <a href="#" class="modal__close"
+          ><img
+            src="img/modal/close.svg"
+            alt="icon: close"
+            class="modal__img"
+          />
+        </a>
+        <h3 class="modal__title">Напишите нам</h3>
+        <form
+          enctype="multipart/form-data"
+          method="post"
+          id="brief"
+          class="modal-brief__form"
+        >
+          <input
+            type="text"
+            name="brief_name"
+            placeholder="Ваше полное имя*"
+            class="input modal-brief__name"
+          /><input
+            type="tel"
+            name="brief_phone"
+            placeholder="Номер телефона*"
+            class="input modal-brief__phone"
+          />
+          <input
+            type="email"
+            name="brief_email"
+            placeholder="E-mail*"
+            class="input modal-brief__email"
+          />
+          <textarea
+            class="modal-brief__text"
+            placeholder="Сообщение"
+            name="brief_text"
+          ></textarea>
+          <div class="modal-brief__group">
+            <span class="modal-brief__label">* Обязательные поля</span>
+            <button
+              class="button button_light modal-brief__button"
+              type="submit"
+              value="sendMessage"
+              name="sendBooking"
+            >
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="success-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal-success">
+        <a href="#" class="modal__close"
+          ><img
+            src="img/modal/close.svg"
+            alt="icon: close"
+            class="modal__img"
+          />
+        </a>
+        <h3 class="modal__title">Спасибо!</h3>
+        <p class="modal__text" id="success-text">
+          "Сообщение успешно отправлено!<br />Мы скоро свяжемся с Вами!
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="fail-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal-fail">
+        <a href="#" class="modal__close"
+          ><img
+            src="img/modal/close.svg"
+            alt="icon: close"
+            class="modal__img"
+          />
+        </a>
+        <h3 class="modal__title">Ой!</h3>
+        <p class="modal__text">
+          Что-то пошло не так.<br />
+          Пожалуйста, попробуйте связаться с нами позже.
+        </p>
+      </div>
+    </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/send.js"></script>
   </body>
 </html>
