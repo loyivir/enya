@@ -1,0 +1,92 @@
+@import '../variables'
+.footer
+  background-color: $bg_dark
+  &__container
+  &__wrapper
+    padding-top: 128px
+    padding-bottom: 82px
+    display: grid
+    grid-template: 1fr 1fr / 25% 16.5% 16.5% 16.5% 16.5%
+    grid-template-areas: "about product services company more" "copyright copyright copyright copyright copyright"
+    column-gap: 0.65%
+    row-gap: 12px
+    font-family: 'Open Sans', sans-serif
+
+  &-about
+    grid-area: about
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  &__link
+    margin-bottom: 28px
+  &__img
+    width: 90px
+    height: 28px
+
+  &__slogan
+    font-weight: 400
+    font-size: 15px
+    line-height: 28px
+    color: $font_text
+    margin-bottom: 30px
+    max-width: 240px
+  &-social
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    width: 181px
+    &__link
+    &__img
+  &-menu
+    &__title
+      font-weight: 700
+      font-size: 18px
+      line-height: 25px
+      color: $font_text
+      margin-bottom: 31px
+    &__nav
+    &__item
+      margin-bottom: 24px
+    &__link
+      font-weight: 400
+      font-size: 16px
+      line-height: 22px
+      color: $footer_link
+  &-copywright
+    grid-area: copyright
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-center
+    align-items: center
+    padding-left: 75px
+    padding-top: 60px
+    &__wrapper
+      background: $bg_heart
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2)
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 56px
+      height: 56px
+      margin-bottom: 24px
+    &__img
+      width: 24px
+      height: 24px
+    &__info
+      font-weight: 600
+      color: $font_text
+      font-size: 16px
+      line-height: 22px
+      text-align: center
+
+#product
+  grid-area: product
+#services
+  grid-area: services
+#company
+  grid-area: company
+#more
+  grid-area: more

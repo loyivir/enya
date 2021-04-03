@@ -142,7 +142,17 @@
       &__item
         flex-basis: 48%
         margin-bottom: 32px
+  .footer
 
+    &__wrapper
+      padding-top: 128px
+      padding-bottom: 82px
+      display: grid
+      grid-template: 1fr 1fr / 25% 14% 14% 19% 16.5%
+      grid-template-areas: "about product services company more" "copyright copyright copyright copyright copyright"
+      column-gap: 0.65%
+      row-gap: 12px
+      font-family: 'Open Sans', sans-serif
 @media only screen and (max-width: 992px)
   h1
     font-size: 32px
@@ -215,6 +225,42 @@
       &__slogan
         font-size: 14px
         line-height: 20px
+  .footer
+    &__wrapper
+      padding-top: 50px
+      padding-bottom: 82px
+
+      grid-template: 1fr 0.9fr 1fr/ 50% 50%
+      grid-template-areas: "product services" "company more" "about about"
+      column-gap: 0.7%
+      row-gap: 20px
+    &-about
+      align-items: center
+    &__slogan
+      text-align: center
+      max-width: 100%
+      margin-bottom: 25px
+    &__img
+      width: 77px
+      height: 24px
+    &__link
+      margin-bottom: 13px
+    &-copywright
+      display: none
+    &-menu
+      padding-left: 5px
+      height: fit-content
+      &__title
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 20px
+
+      &__item
+        margin-bottom: 15px
+      &__link
+        font-size: 14px
+        line-height: 20px
+
 @media only screen and (max-width: 870px)
   h1
     font-size: 30px
@@ -525,7 +571,7 @@
     &__container
     &__wrapper
       padding-top: 65px
-      padding-bottom: 65px
+      padding-bottom: 53px
     &__title
 
       font-size: 28px
