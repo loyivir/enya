@@ -135,7 +135,7 @@ $("#brief").validate({
   rules: {    
       brief_name: {
       required: true,
-      minlength: 1,
+      minlength: 2,
       maxlength: 32
     },
     brief_phone: {
@@ -156,9 +156,14 @@ $("#brief").validate({
     }
   },
   messages: {
-    booking_name: "Пожалуйстаб представьтесь",
-    booking_phone: "Нам нужен ваш номер для связи",    
-    booking_email: {
+    brief_name: { required: "Пожалуйста, представьтесь",
+    minlength: "Пожалуйста, введите хотя бы 2 символа"
+  },
+    brief_phone: {
+      required: "Нам нужен ваш номер для связи",
+     minlength: "Пожалуйста, введите полный номер"
+    },    
+    brief_email: {
       required: "Нам нужен адрес вашей почты для связи",
       email: "Пожалуйста, введите адрес вашей почты в формате name@domain.ru"
     }
