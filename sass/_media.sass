@@ -591,7 +591,7 @@
       padding-right: 27px
       font-size: 16px
       line-height: 22px
-      &:hover
+
   .modal
     &-brief
       padding: 33px 66px
@@ -634,3 +634,30 @@
       &__button
         margin-bottom: 15px
         width: 160px
+@media (hover:none)
+  a
+    &:hover
+      text-decoration: none
+  .button
+    &_dark
+      &:hover
+        color: $font_light
+        background-color: $font_header
+        border: 2px solid $font_header
+    &_light
+      &:hover
+        color: $font_dark
+        background-color: $bg_light
+        border: 2px solid $bg_light
+    &_framed
+      &:hover
+        border-color: $bg_dark
+        color: $bg_dark
+  .portfolio
+    &__button
+      &:hover
+        border: none
+  .feedbacks
+    &__button
+      &:hover
+        border: none
