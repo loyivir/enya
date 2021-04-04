@@ -25,7 +25,7 @@
     &-bg
       position: absolute
       right: 0
-      top: 160px
+      top: 110px
       width: 345px
       height: 432px
       z-index: 0
@@ -110,7 +110,7 @@
 
       font-size: 20px
       line-height: 32px
-      margin-bottom: 10px
+      margin-bottom: 15px
     &__who
       align-items: center
       text-align: center
@@ -331,6 +331,8 @@
       padding-top: 20px
       padding-bottom: 26px
   .main
+    &__container
+      min-height: 800px
     &__wrapper
       flex-direction: column
       justify-content: flex-start
@@ -398,9 +400,12 @@
     &-list
       flex-wrap: wrap
       max-width: 100%
+      padding-left: 18px
+      padding-right: 20px
       &__img
         flex-basis: 50%
         max-height: 32px
+        max-width: 108px
         margin-bottom: 25px
         &:nth-child(2)
           height: 26px
@@ -478,7 +483,7 @@
     background-color: $bg_light
     &__wrapper
       padding-top: 50px
-      padding-bottom: 20px
+      padding-bottom: 25px
       align-items: center
     &__title
       margin-bottom: 10px
@@ -584,14 +589,13 @@
       width: 100%
       color: $font_light
       z-index: 2
-      margin-bottom: 10px
+      margin-bottom: 15px
     &__button
       z-index: 2
       padding-left: 23px
       padding-right: 27px
       font-size: 16px
       line-height: 22px
-
   .modal
     &-brief
       padding: 33px 66px
