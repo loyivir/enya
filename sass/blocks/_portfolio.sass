@@ -9,14 +9,18 @@
     justify-content: flex-start
     align-items: flex-start
     position: relative
+    min-height: 790px
   &__title
     margin-bottom: 15px
 
   &-swiper
-
-    width: calc(100% + (100vw - 100%) - 10px)
+    position: absolute
+    left: 50%
+    top: 127px
+    transform: translateX(-50%)
+    width: calc(100vw)
     max-width: 1440px
-    transform: translateX(-150px)
+
     &__wrapper
     &__slide
       width: 360px
@@ -35,10 +39,10 @@
     &_prev
 
       right: 155px
-      top: 60px
+      top: 65px
     &_next
       right: 95px
-      top: 60px
+      top: 65px
       transform: scaleX(-1)
 
   &-item
@@ -52,6 +56,9 @@
   &__item-title
     padding-left: 25px
     margin-top: 0px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
   &__img
     height: 400px
     transform: translateY(-45px)

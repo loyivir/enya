@@ -4,6 +4,7 @@ $(document).ready(function() {
 let menuButton = document.querySelector(".header__menu");
 menuButton.addEventListener("click", function(){  
   document.querySelector(".header__nav").classList.toggle("header__nav_visible");
+  document.querySelector("body").classList.toggle("scroll-hidden");
 });
 
   const portfolioSwiper = new Swiper('.portfolio-swiper', {
@@ -52,6 +53,7 @@ menuButton.addEventListener("click", function(){
         },
       }
 });
+
 portfolioSwiper.slideNext(0, false);
 // Initialize portfolio slider
   const feedbacksSwiper = new Swiper('.feedbacks-swiper', {

@@ -72,6 +72,7 @@
       &__slogan
         font-size: 14px
         line-height: 20px
+
   .feedbacks
     &__title
       margin-bottom: 25px
@@ -154,6 +155,38 @@
       row-gap: 12px
       font-family: 'Open Sans', sans-serif
 @media only screen and (max-width: 992px)
+  a
+    &:hover
+      text-decoration: none
+  .button
+    &_dark
+      &:hover
+        color: $font_light
+        background-color: $font_header
+        border: 2px solid $font_header
+    &_light
+      &:hover
+        color: $font_dark
+        background-color: $bg_light
+        border: 2px solid $bg_light
+    &_framed
+      &:hover
+        border-color: $bg_dark
+        color: $bg_dark
+  .portfolio
+    &__button
+      &:hover
+        border: none
+  .feedbacks
+    &__button
+      &:hover
+        border: none
+  .nav-item_expanded:hover .nav
+    opacity: 1
+    transform: scaleY(1)
+    display: flex
+    flex-direction: column
+
   h1
     font-size: 32px
     line-height: 40px
@@ -273,6 +306,7 @@
       &_expanded
         flex-direction: column
   .header
+
     &__nav
       display: none
       &_visible
@@ -331,6 +365,7 @@
       padding-top: 20px
       padding-bottom: 26px
   .main
+
     &__container
       min-height: 775px
     &__wrapper
@@ -347,7 +382,7 @@
     &__next
       left: 50%
       bottom: -310px
-      z-index: 99
+      z-index: 10
       transform: translateX(-50%)
 
       width: 48px
@@ -458,22 +493,26 @@
           order: 2
         &:nth-child(3)
           order: 5
+          padding-left: 16px
         &:nth-child(4)
           order: 3
         &:nth-child(5)
           order: 4
         &:nth-child(6)
           order: 6
+
       &__slogan
         font-size: 14px
         line-height: 20px
       &__title
         font-size: 20px
         line-height: 24px
+        margin-bottom: 7px
       &__img
-        width: 40px
-        height: 38px
-        margin-bottom: 17px
+        width: 33px
+        height: 30px
+        margin-bottom: 25px
+        margin-left: 2px
         padding-top: 0px
       &__text
         padding-left: 0px
@@ -485,6 +524,7 @@
       padding-top: 50px
       padding-bottom: 25px
       align-items: center
+      min-height: fit-content
     &__title
       margin-bottom: 10px
       padding-left: 10px
@@ -496,6 +536,9 @@
       height: fit-content
       max-width: 100%
       transform: translateX(0px)
+      position: relative
+      left: auto
+      top: auto
       &__wrapper
       &__slide
         width: 280px
